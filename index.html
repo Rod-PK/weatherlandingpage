@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <video autoplay muted loop id="myVideo">
-        <source src="https://res.cloudinary.com/dzzqbx7p2/video/upload/v1727368775/Untitled_design_t1nlqo.mp4" type="video/mp4">
-      </video>
+        <source src="https://res.cloudinary.com/dzzqbx7p2/video/upload/v1727368775/Untitled_design_t1nlqo.mp4"
+            type="video/mp4">
+    </video>
     <div class="container">
         <!-- Search Bar -->
         <div class="search-box">
-            <input type="text" id="search" placeholder="Search for places..." />
+            <input type="text" id="search" placeholder="Search for cities..." />
             <button onclick="getWeather()">Search</button>
         </div>
-
+    </div>
+    <div class="container2">
         <!-- Weather Overview -->
         <div class="weather-overview">
             <div class="weather-icon">
                 <img id="weather-icon" src="./assets/images/cloudy.png" alt="Weather Icon">
             </div>
-            <div class="temperature" id="temperature"></div>
+            <div class="temperature" id="temperature">0°C</div>
             <!-- <div class="day" id="day"></div> -->
             <div class="description" id="description"></div>
-            <div class="rain-percentage" id="rain">
+            <div class="rain-percentage" id="rain">0mm
                 <!-- <img src="./assets/images/rain.png" alt=""> -->
             </div>
-            <div class="location" id="location"></div>
+            <div class="location" id="location">City</div>
         </div>
 
         <!-- Weekly Weather -->
@@ -49,31 +53,31 @@
         <div class="highlights">
             <div class="highlight">
                 <p>UV Index</p>
-                <div class="value" id="uv-index"></div>
+                <div class="value" id="uv-index">0.0</div>
             </div>
             <div class="highlight">
                 <p>Wind Status</p>
-                <div class="value" id="wind-status"></div>
+                <div class="value" id="wind-status">0.0m/s</div>
             </div>
             <!-- <div class="highlight">
-                <p>Sunrise & Sunset</p>
-                <div class="value" id="sun-times"></div>
-            </div> -->
+            <p>Sunrise & Sunset</p>
+            <div class="value" id="sun-times"></div>
+        </div> -->
             <div class="highlight">
                 <p>Humidity</p>
-                <div class="value" id="humidity"></div>
+                <div class="value" id="humidity">0%</div>
             </div>
             <div class="highlight">
                 <p>Visibility</p>
-                <div class="value" id="visibility"></div>
+                <div class="value" id="visibility">N/A</div>
             </div>
             <div class="highlight">
                 <p>Air Quality</p>
-                <div class="value" id="air-quality"></div>
+                <div class="value" id="air-quality">0</div>
             </div>
         </div>
     </div>
-
     <script src="./scripts.js"></script>
 </body>
+
 </html>

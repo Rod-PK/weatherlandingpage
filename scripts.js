@@ -33,9 +33,7 @@ async function fetchWeatherByCoordinates(lat, lon, city) {
     const weatherUrl = `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lon}`;
     try {
         const response = await fetch(weatherUrl, {
-            headers: {
-                'User-Agent': 'YourAppName/1.0 (your-email@example.com)' // Replace with your app name and email
-            }
+    
         });
         const weatherData = await response.json();
 
@@ -52,12 +50,6 @@ async function fetchWeatherByCoordinates(lat, lon, city) {
         document.getElementById('wind-status').innerText = `${currentWeather.wind_speed} m/s`;
         document.getElementById('humidity').innerText = `${currentWeather.relative_humidity}%`;
         document.getElementById('visibility').innerText = `${(currentWeather.visibility / 1000).toFixed(1)} km`;
-
-        // Display sunrise and sunset times
-        document.getElementById('sun-times').innerText = `${sunrise} / ${sunset}`;
-
-        // Update the weather icon if you have custom icons
-        document.getElementById('weather-icon').src = 'path/to/your/default/icon.png'; // Placeholder for icons
 
     } catch (error) {
         console.error('Error fetching weather data:', error);
