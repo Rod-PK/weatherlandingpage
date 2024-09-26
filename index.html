@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://res.cloudinary.com/dzzqbx7p2/video/upload/v1727368775/Untitled_design_t1nlqo.mp4" type="video/mp4">
+      </video>
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search for places..." />
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <!-- Weather Overview -->
+        <div class="weather-overview">
+            <div class="weather-icon">
+                <img id="weather-icon" src="./assets/images/cloudy.png" alt="Weather Icon">
+            </div>
+            <div class="temperature" id="temperature"></div>
+            <!-- <div class="day" id="day"></div> -->
+            <div class="description" id="description"></div>
+            <div class="rain-percentage" id="rain">
+                <!-- <img src="./assets/images/rain.png" alt=""> -->
+            </div>
+            <div class="location" id="location"></div>
+        </div>
+
+        <!-- Weekly Weather -->
+        <div class="weekly-weather">
+            <div class="week-days">
+                <!-- Each day will be populated by JavaScript -->
+                <div class="day" id="day1"></div>
+                <div class="day" id="day2"></div>
+                <div class="day" id="day3"></div>
+                <div class="day" id="day4"></div>
+                <div class="day" id="day5"></div>
+                <div class="day" id="day6"></div>
+                <div class="day" id="day7"></div>
+            </div>
+        </div>
+
+        <!-- Today's Highlights -->
+        <div class="highlights">
+            <div class="highlight">
+                <p>UV Index</p>
+                <div class="value" id="uv-index"></div>
+            </div>
+            <div class="highlight">
+                <p>Wind Status</p>
+                <div class="value" id="wind-status"></div>
+            </div>
+            <!-- <div class="highlight">
+                <p>Sunrise & Sunset</p>
+                <div class="value" id="sun-times"></div>
+            </div> -->
+            <div class="highlight">
+                <p>Humidity</p>
+                <div class="value" id="humidity"></div>
+            </div>
+            <div class="highlight">
+                <p>Visibility</p>
+                <div class="value" id="visibility"></div>
+            </div>
+            <div class="highlight">
+                <p>Air Quality</p>
+                <div class="value" id="air-quality"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>

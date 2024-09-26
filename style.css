@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+}
+
+body {
+    /* background-image: url(./assets/images/bg.jpg); */
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f4f6f9; */
+    margin: 0;
+    padding: 0;
+}
+
+#myVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 10%;
+}
+
+.search-box input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    /* padding-bottom: 10%; */
+}
+
+/* Weather Overview */
+.weather-overview {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    /* padding-top: 50%; */
+    padding: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.weather-icon img {
+    width: 100px;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.day,
+.description,
+.rain-percentage,
+.location {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Weekly Weather */
+.weekly-weather {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: white; */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.weekly-weather .day {
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+
+/* Highlights */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* background-color: white; */
+    padding: 20px;
+    border-radius: 15px;
+    padding-top: 7%;
+}
+
+.highlight {
+    width: 150px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlight p {
+    font-size: 16px;
+    color: #555;
+}
+
+.highlight .value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+        padding: 15px;
+    }
+
+    .search-box input {
+        width: 250px;
+    }
+
+    .weather-overview {
+        padding: 15px;
+    }
+
+    .temperature {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .weather-overview {
+        flex-direction: column;
+    }
+
+    .weekly-weather,
+    .highlights {
+        flex-direction: column;
+    }
+
+    .weekly-weather .day,
+    .highlight {
+        margin: 10px 0;
+    }
+
+    .highlight {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .search-box input {
+        width: 220px;
+    }
+
+    .temperature {
+        font-size: 32px;
+    }
+
+    .weekly-weather .day,
+    .highlight {
+        width: 100%;
+    }
+
+    .highlight {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 400px;
+    }
+
+    .search-box input {
+        width: 180px;
+    }
+
+    .temperature {
+        font-size: 28px;
+    }
+
+    .weekly-weather {
+        padding: 10px;
+    }
+
+    .highlights {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .weather-overview,
+    .weekly-weather,
+    .highlights {
+        padding: 10px;
+    }
+
+    .search-box input {
+        width: 150px;
+    }
+
+    .temperature {
+        font-size: 24px;
+    }
+
+    .highlight p {
+        font-size: 14px;
+    }
+
+    .highlight .value {
+        font-size: 20px;
+    }
+}
